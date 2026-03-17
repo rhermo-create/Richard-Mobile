@@ -1,0 +1,283 @@
+/* =========================================
+   Settings Pages Styles
+   ========================================= */
+
+/* Settings Tabs */
+.settings-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 0.35rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.settings-tab {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.settings-tab:hover {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.settings-tab--active {
+  background: var(--primary-color);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.settings-tab--active:hover {
+  background: var(--primary-light);
+  color: var(--white);
+}
+
+/* Settings Card */
+.settings-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.settings-card__header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.settings-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.35rem;
+}
+
+.settings-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Settings Form */
+.settings-form {
+  margin-top: 0.5rem;
+}
+
+.settings-form--narrow {
+  max-width: 480px;
+}
+
+.settings-form__actions {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Inline form (add category / doc type) */
+.settings-inline-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-end;
+}
+
+.settings-inline-form .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.btn--compact {
+  padding: 0.7rem 1.25rem;
+  white-space: nowrap;
+  width: auto;
+  min-width: auto;
+  font-size: 0.88rem;
+}
+
+/* Action buttons in tables */
+.settings-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background: var(--white);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+
+.btn-icon:hover {
+  background: var(--secondary-color);
+  border-color: var(--primary-light);
+}
+
+.btn-icon--danger:hover {
+  background: hsl(0, 90%, 96%);
+  border-color: var(--error-color);
+}
+
+/* Button variants */
+.btn--outline {
+  background: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn--outline:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.btn--ghost:hover {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Info Grid (read-only view) */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+}
+
+.info-item--full {
+  grid-column: 1 / -1;
+}
+
+.info-item__label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.info-item__value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 0.55rem 0.75rem;
+  background: var(--secondary-color);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 767px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Form hint */
+.form-hint {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* Password requirements box */
+.password-requirements {
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.password-requirements__title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.password-requirements__list {
+  list-style: none;
+  padding: 0;
+}
+
+.password-requirements__list li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.password-requirements__list li::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .settings-tabs {
+    gap: 0.15rem;
+    padding: 0.25rem;
+  }
+
+  .settings-tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .settings-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .settings-inline-form {
+    flex-direction: column;
+  }
+
+  .settings-inline-form .input {
+    width: 100%;
+  }
+
+  /* .btn--ghost {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  } */
+}
+
+@media (min-width: 768px) {
+  .settings-card {
+    padding: 2.25rem 2rem;
+  }
+}
